@@ -1,41 +1,76 @@
 body {
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  font-family: 'Arial', sans-serif;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   line-height: 1.6;
+  transition: background-color 0.5s, color 0.5s;
 }
 
+/* ✨ Анимация эффекті */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header, section, footer {
+  animation: fadeInUp 1s ease;
+}
+
+/* 🧊 Header */
 header {
   text-align: center;
   margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* 📦 Section */
 section {
   margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* 📱 Footer */
 footer {
   text-align: center;
   margin-top: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 15px;
+  border-radius: 10px;
 }
 
+/* 🔘 Батырма стилі */
 footer a {
   display: inline-block;
   padding: 10px 15px;
   margin: 5px;
-  background-color: #007BFF;
+  background-color: #00bcd4;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 footer a:hover {
-  background-color: #0056b3;
+  background-color: #008c9e;
+  transform: scale(1.05);
 }
 
+/* 🌙 Түнгі режим батырмасы */
 #darkModeBtn {
   display: inline-block;
   padding: 10px 15px;
@@ -43,14 +78,17 @@ footer a:hover {
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #darkModeBtn:hover {
   background-color: #555;
+  transform: scale(1.05);
 }
 
+/* 🌌 Түнгі режим */
 .dark-mode {
   background-color: #121212;
   color: #ffffff;
